@@ -1,0 +1,70 @@
+<html>
+    <head>
+        <title> Contact Us </title>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        
+        <script> 
+            function validateForm(){
+
+               var name = document.getElementById("name").value.trim();
+               var email = document.getElementById("email").value.trim();
+
+               if(email == "" || email.indexOf("@") == -1 || email.indexOf(".") == -1){
+                   alert("Email is required");
+                   return false;
+               }
+               
+               if(name==""){
+                   alert("Name is required");
+                   return false;
+               }
+               
+               alert( "Thank you for your submission " + name + "!" );    
+
+             }
+            
+       </script>
+    </head>
+    <body>
+        <header> <h1> Contact Us </h1> </header>
+        <br>
+
+        <center> 
+        <div style="text-align: center; font-style: bold; font-size: 20px;">
+        <h3>Email:</h3> 
+        <p style="text-decoration: underline;">vmiInformation.edu</p>
+        <h3>Office Phone:</h3> 
+        <p style= "text-decoration: underline">540-464-7207</p>
+        <h3> Fax: </h3>
+        <p style="text-decoration: underline;"> 540-464-7207</p>
+        <h3>Office Location:</h3>
+        <p>Virginia Military Institute, Lexington, VA 24450</p>
+        <h3> PO Box: </h3>
+        <p style="text-decoration: underline;"> 932</p>
+        <h3> Hours of Operation: </h3>
+        <p> Monday - Friday: 8:00am - 4:00pm</p>
+        <br>
+        <h3> Questions? </h3>
+        </div>
+
+        <form method = "post" onsubmit="return validateForm()">
+            Name: <input type = "text" name= "user_name" id="name"> <br><br>
+            Email: <input type = "text" name= "user_email" id="email"> <br><br>
+            Any questions or concerns please type here: <br>
+
+                <textarea id="request" name="request" rows="5" cols="30"> </textarea> <br><br>
+                <input type = "submit" value="Submit">
+        </center>
+        </form>
+
+        <div style="text-align: center; font-style: bold; font-size: 25px;">
+            <h2> Home </h2>
+            <form action ="home.html" method = "post"> 
+            <input type = "submit" value="Home" style="background-color: #ce0c0c; color: white; border-radius: 8px; padding: 10px 24px; font-size: 16px; cursor: pointer; text-align: center; margin: 4px 2px; transition: all 0.5s; display: inline-block; border: none;">
+            
+        </div>
+            </form>
+        </div> 
+    
+        <footer> <h2> Hagerich, Milam, Schifflett &copy;</h2></footer>
+</html>
